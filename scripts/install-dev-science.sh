@@ -7,7 +7,8 @@ p="${p%/*}"
 
 
 replace_calculators() {
-    if pacman -Qi gnome-calculator > /dev/null && pacman -Qi qalculate-gtk > /dev/null; then
+    # if pacman -Qi gnome-calculator > /dev/null && pacman -Qi qalculate-gtk > /dev/null; then
+    if [ -x "$(command -v gnome-calculator)" ] && [ -x "$(command -v qalculate-gtk)" ]; then
         gum log -l info "Gnome calculator and Qalculate detected"
         calculator_to_delete="$(gum choose 'gnome-calculator' 'qalculate-gtk' --header 'Which one to remove? Skip with CTRL-C')"
 

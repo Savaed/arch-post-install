@@ -3,7 +3,7 @@
 
 p=$(dirname "$0")
 
-if  pacman -Q bluez bluez-utils > /dev/null; then
+if ! pacman -Q bluez bluez-utils > /dev/null; then
     pacman -S bluez bluez-utils
 fi
 
@@ -12,7 +12,8 @@ if ! lsmod | grep btusb > /dev/null; then
 fi
 
 sudo usermod -aG lp "$USER"
-systemctl enable bluetooth
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth
 
 if ! systemctl list-units | grep bluetooth > /dev/null; then
     exit 1

@@ -7,14 +7,6 @@ p="${p%/*}"
 
 _install_packages_from_json() {
     config_section=$1
-    opt="S"
-
-    # Only aura supported
-    if [ "$2" = "aur" ]; then
-        cmd="paru"
-    else
-        cmd="pacman"
-    fi
 
     if ! jq -r ".$config_section.$2[]" "$p/packages.jsonc" > /dev/null 2>&1; then
         exit
@@ -35,7 +27,12 @@ _install_packages_from_json() {
         return
     fi
 
-    echo "$selected" | xargs sudo "$cmd" "-$opt"
+    if [ "$2" = "aur" ]; then
+        echo "$selected" | xargs paru -S  
+    fi
+    if [ "$2" = "pacman" ]; then
+        echo "$selected" | xargs sudo pacman --noconfirm -S  
+    fi
 }
 
 

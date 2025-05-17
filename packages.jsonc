@@ -3,13 +3,6 @@
     "base-devel",
     "bluez",
     "bluez-utils",
-    "fuse2",
-    "qt5-quickcontrols",
-    "qt5-quickcontrols2",
-    "fuse3",
-    "git",
-    "gum",
-    "jq",
     "linux-firmware",
     "linux-headers",
     "man-db",
@@ -19,10 +12,16 @@
     "reflector",
     "sudo",
     "unzip",
-    "zip"
+    "zip",
+    "git",
+    "fuse3",
+    "fuse2"
   ],
   "desktop": {
     "pacman": [
+      "pika-backup",
+      "qt5-quickcontrols",
+      "qt5-quickcontrols2",
       "blueman",
       "btop",
       "geary",
@@ -36,13 +35,10 @@
       "kooha",
       "loupe",
       "nautilus",
-      "nm-connection-editor",
       "noto-fonts",
       "pavucontrol",
-      "pinta",
       "pipewire",
       "polkit-gnome",
-      "q6-5compat",
       "qt5-wayland",
       "qt6-svg",
       "qt6-wayland",
@@ -59,7 +55,6 @@
     "aur": [
       "bibata-cursor-theme",
       "flameshot-git",
-      "pika-backup",
       "yaru-gtk-theme"
     ]
   },
@@ -91,12 +86,9 @@
       "uv",
       "virtualbox",
       "xh",
-      "zoxide",
-      "tokei"
+      "zoxide"
     ],
     "aur": [
-      "duckdb-bin",
-      "morgen-bin",
       "zotero-bin"
     ]
   },
@@ -112,16 +104,17 @@
       "hyprlock",
       "hyprpaper",
       "imagemagick",
+      "hyprpolkitagent",
+      "hyprsunset",
       "nwg-look",
       "slurp",
-      "wallust",
       "waybar ",
       "wl-clipboard",
       "xdg-desktop-portal-gtk",
       "xdg-desktop-portal-hyprland"
     ],
     "aur": [
-      "hyprshade",
+      "wallust",
       "wlogout"
     ]
   }

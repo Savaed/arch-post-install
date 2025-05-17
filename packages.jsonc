@@ -19,6 +19,11 @@
   ],
   "desktop": {
     "pacman": [
+      "pipewire",
+      "pipewire-pulse",
+      "wireplumber",
+      "ghostty",
+      "npm",
       "pika-backup",
       "qt5-quickcontrols",
       "qt5-quickcontrols2",
@@ -37,7 +42,6 @@
       "nautilus",
       "noto-fonts",
       "pavucontrol",
-      "pipewire",
       "polkit-gnome",
       "qt5-wayland",
       "qt6-svg",
@@ -47,7 +51,6 @@
       "udiskie",
       "udisks2",
       "vlc",
-      "wireplumber",
       "xdg-desktop-portal",
       "zathura",
       "zathura-pdf-mupdf"
@@ -55,11 +58,14 @@
     "aur": [
       "bibata-cursor-theme",
       "flameshot-git",
-      "yaru-gtk-theme"
+      "yaru-gtk-theme",
+      "yaru-icon-theme",
+      "sidekick-broweser-stable-bin"
     ]
   },
   "dev_science": {
     "pacman": [
+      "delta",
       "bat",
       "docker",
       "docker-compose",

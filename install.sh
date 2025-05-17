@@ -61,6 +61,14 @@ install_display_manager() {
     fi
 }
 
+
+setup_audio() {
+    systemctl --user enable --now pipewire
+    systemctl --user enable --now pipewire-pulse
+    systemctl --user enable --now wireplumber
+    gum log -l info 'Audio setup (pipewire, pipewire-pulse, wireplumber)'
+}
+
 post_intall () {
     if [ -x "$(command -v bat)" ]; then
         # Rebuild e.g. themes
@@ -90,4 +98,6 @@ gum confirm "Install development and science packages?" && "$p/scripts/install-d
 gum confirm "Install hyprland packages?" && install_packages_from_json hyprland
 
 gum confirm "Setup SHH and firewall?" && ./scripts/ssh-hardening.sh && ./scripts/firewall.sh
+
+setup_audio 
 

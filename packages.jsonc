@@ -19,6 +19,7 @@
   ],
   "desktop": {
     "pacman": [
+      "alsa-utils",
       "pipewire",
       "pipewire-pulse",
       "wireplumber",
@@ -53,7 +54,8 @@
       "vlc",
       "xdg-desktop-portal",
       "zathura",
-      "zathura-pdf-mupdf"
+      "zathura-pdf-mupdf",
+      "qalculate-gtk"
     ],
     "aur": [
       "bibata-cursor-theme",
@@ -65,6 +67,7 @@
   },
   "dev_science": {
     "pacman": [
+      "fastfetch",
       "delta",
       "bat",
       "docker",
@@ -100,6 +103,7 @@
   },
   "hyprland": {
     "pacman": [
+      "pacman-contrib", 
       "cheese",
       "copyq",
       "dunst",
